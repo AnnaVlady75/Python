@@ -11,7 +11,7 @@
 #     -> 1
 
 N= int(input())
-m = [int(x) for x in input().split()] # через пробел
+massive = [int(x) for x in input().split()] # через пробел
 x = int(input())
 
-print(m.count(x))
+print("->", massive.count(x))
