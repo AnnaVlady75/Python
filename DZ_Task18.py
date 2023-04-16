@@ -8,14 +8,12 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
-n = int(input())
-for i in range(n):
-    list = [int(input())]
-
+N = int(input())
+massive = [int(x) for x in input().split()]  # через пробел
 x = int(input())
-res = list[0]
 
-for i in list:
-    if abs(x-i) < abs(x-i):
+res = massive[0]
+for i in massive:
+    if abs(i-x) < abs(res-x):
         res = i
-print("->" , res)
+print("->", res)
