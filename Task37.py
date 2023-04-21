@@ -7,3 +7,16 @@
 # Input:    2 -> 3 4
 # Output: 4 3
 
+#print(*input().split()[::-1])
+
+#from random import randint
+
+def recr(n):
+    a = input()
+    if n == 1:
+        return a
+    return recr(n - 1) + a 
+    
+n = int(input())
+print(recr(n))    
+

@@ -12,3 +12,17 @@
 # Напишите программу для нахождения максимального числа ягод, 
 # которое может собрать за один заход собирающий модуль,
 # находясь перед некоторым кустом заданной во входном файле грядки.
+
+n = int(input())
+trees = []
+for i in range(n):
+    berries = int(input())
+    trees.append(berries)
+
+sum = []
+for i in range(len(trees) - 1):
+    sum.append(trees[i] + trees[i - 1] + trees[i + 1])
+
+sum.append(trees[-2] + trees[-1] + trees[0])  
+print(max(sum))
+  
