@@ -13,16 +13,16 @@
 # которое может собрать за один заход собирающий модуль,
 # находясь перед некоторым кустом заданной во входном файле грядки.
 
-n = int(input())
-trees = []
+n = int(input("введите количество кустов: "))
+bushs = []
 for i in range(n):
-    berries = int(input())
-    trees.append(berries)
+    berries = int(input("сколько ягод на каждом кусте: "))
+    bushs.append(berries)
 
 sum = []
-for i in range(len(trees) - 1):
-    sum.append(trees[i] + trees[i - 1] + trees[i + 1])
+for i in range(len(bushs) - 1):
+    sum.append(bushs[i] + bushs[i - 1] + bushs[i + 1])
 
-sum.append(trees[-2] + trees[-1] + trees[0])  
+sum.append(bushs[-2] + bushs[-1] + bushs[0])  
 print(max(sum))
   

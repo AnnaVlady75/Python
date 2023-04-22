@@ -7,13 +7,16 @@
 # m — кол-во элементов второго множества. 
 # Затем пользователь вводит сами элементы множеств.
 
-n = int(input())
-m = int(input())
+n = int(input("введите количество элементов первого множества: "))
+m = int(input("введите количество элементов второго множества: "))
 set1 = set()
 set2 = set()
 for i in range(n):
     set1.add(int(input()))
 for i in range(m):
     set2.add(int(input()))
-
-print(set1.intersection(set2))        
+set3 = set()
+for i in set1:
+    if i in set2:
+        set3.add(i)
+print(set3)        
