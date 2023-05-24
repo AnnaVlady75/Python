@@ -1,0 +1,52 @@
+view
+def user_input():
+    ask = int(input("Выбери ниже\n", "1 - записать пользователя\n"))
+    return ask
+
+def man():
+    
+    name = input("имя")
+    family = input("фамилия")
+    father = input("отчество")
+    date = input("дата рождения")
+    telephone = input("телефон")
+    data = name + ";" + family + ";"+ father +";"+ date +";" + telephone + ";" + "\n"
+    return data
+
+def search():
+    str_search = input("строка для поиска  ")
+    return str_search
+ database
+def add_data(data):
+    with open("db.txt", "a") as file:
+        file.write(data)
+    print("Тел книга обновлена \n")    
+
+def search_name(name):
+        with open("db.txt", "r") as file:
+            data = file.readlines()
+            flag = False
+            for i in data:
+                 if name in i:
+                      print(i)
+                      flag = True
+            if flag == False:
+                 print(" нет такого \n")     
+controller
+import view
+import database
+
+def main():
+    while True:
+        ask = view.user_input()
+        print(ask)
+        if ask == 1:
+            data = view.man()
+            database.add.dat(data)
+        elif ask == 2:
+            name = view.search()
+            database.search_name(name)
+
+                
+        elif ask == 6:
+            break    
